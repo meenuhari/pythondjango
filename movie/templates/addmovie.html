@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<center><h1 >Movie add</h1></center>
+<!--<form method="POST" enctype="multipart/form-data">-->
+<!--  {% csrf_token %}-->
+<!--  <div class="form-group">-->
+<!--    <label >Name</label>-->
+<!--    <input type="text" class="form-control" name="n"placeholder="enter movie name">-->
+<!--  </div>-->
+<!--  <div class="form-group">-->
+<!--    <label>Desc</label>-->
+<!--    <input type="text" class="form-control" name="d" placeholder="enter description">-->
+
+<!--  </div>-->
+<!--    <div class="form-group">-->
+<!--    <label >Year</label>-->
+<!--    <input type="text" class="form-control" name="y" placeholder="enter price">-->
+<!--  </div>-->
+
+
+<!--    <div class="form-group">-->
+<!--    <label >Image</label>-->
+<!--    <input type="file" class="form-control" name="i">-->
+<!--  </div>-->
+<!--    <div>-->
+<!--    <button style="margin-top:50px;" type="submit" class="btn btn-primary">Submit</button>-->
+<!--    </div>-->
+<!--</form>-->
+
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+
+    {{form|crispy}}
+
+  <input type="submit"  value="submit">
+
+</form>
+
+{% endblock %}

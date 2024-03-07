@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+<div class="container mt-3 ms-3">
+    <img src="{{movie.img.url}}" height="240px" width="270px" >
+    <div class="row">
+
+<div class="col ">
+
+
+
+
+<h3>Movie:{{movie.name}}</h3><br>
+<p class="fs-4">{{ movie.desc}}</p><br>
+
+<h3>Year of Release:{{movie.year }}</h3><br>
+<a href="{% url 'edit' movie.id  %}"><button class="btn btn-success">Update</button></a>
+    <a href="{% url 'delete' movie.id  %}"><button class="btn btn-danger">Delete</button></a>
+</div>
+
+
+</div>
+
+{% endblock %}
